@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-gray-1 bg-gray-10 text-sm leading-6;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-sm;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-letterSpacig-3 capitalize leading-tight font-bold;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply uppercase bg-primary text-white py-1 px-3 font-bold border-none cursor-pointer shadow tracking-letterSpacig-3 transition-all hover:text-primary hover:bg-primary-light;
+  }
+
+  .amount-container {
+    @apply absolute w-6 h-6 p-4 rounded-full bg-primary-light flex items-center justify-center -top-3 -right-3;
+  }
+  .total-amount {
+    @apply text-lg md:text-xl text-white leading-none;
+  }
+  .amount-btn {
+    @apply w-6 cursor-pointer border-none;
+  }
+  .amount-btn svg {
+    @apply text-primary hover:text-primary-light transition-all;
+  }
+  .amount {
+    @apply text-center leading-none text-lg;
+  }
+  .clear-btn,
+  .confirm-btn {
+    @apply bg-transparent border-solid border mt-9 rounded py-2 px-4 btn;
+  }
+
+  .clear-btn {
+    @apply text-red-dark border-red-dark  hover:bg-red-light hover:border-red-light hover:text-red-dark;
+  }
+
+  .confirm-btn {
+    @apply text-primary border-primary-light;
+  }
+
+  .remove-btn {
+    @apply text-primary text-sm tracking-letterSpacig-3 cursor-pointer border-none transition-all hover:text-primary-light;
+  }
+}
+
+@media screen(md) {
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-base;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-letterSpacig-3 capitalize leading-tight;
+  }
+}
